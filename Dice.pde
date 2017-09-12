@@ -1,10 +1,13 @@
 void setup()
 {
+	size(200,200);
 	noLoop();
 }
 void draw()
 {
-	//your code here
+	background(0);
+	Die b = new Die(20,150);
+	b.show();
 }
 void mousePressed()
 {
@@ -23,6 +26,6 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		//your code here
+		rect(25,25,50,50,7);
 	}
 }
