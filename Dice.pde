@@ -15,17 +15,44 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	//variable declarations here
+	int myX;
+	int myY;
+	int droll;
+
 	Die(int x, int y) //constructor
 	{
-		//variable initializations here
+		myX = x;
+		myY = y;
+		roll();
 	}
 	void roll()
 	{
-		//your code here
+		droll = 2;
 	}
+	
 	void show()
 	{
 		rect(25,25,50,50,7);
+
+		if(droll == 0)
+		{
+		fill(0);
+		ellipse(50,50,7,7);
+		}
+		else if(droll == 1)
+		{
+		fill(0);
+		ellipse(40,40,7,7);
+		ellipse(60,60,7,7);
+		}
+		else if(droll == 2)
+		{
+		fill(0);
+		ellipse(40,40,7,7);
+		ellipse(60,60,7,7);
+		ellipse(50,50,7,7);
+		}
+
+
 	}
 }
