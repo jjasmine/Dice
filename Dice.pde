@@ -27,30 +27,57 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		droll = 2;
+		droll = (int)(Math.random() * 5 + 1);
 	}
 	
 	void show()
 	{
 		rect(25,25,50,50,7);
 
-		if(droll == 0)
+		if(droll == 1)
 		{
 		fill(0);
 		ellipse(50,50,7,7);
-		}
-		else if(droll == 1)
-		{
-		fill(0);
-		ellipse(40,40,7,7);
-		ellipse(60,60,7,7);
 		}
 		else if(droll == 2)
 		{
 		fill(0);
 		ellipse(40,40,7,7);
 		ellipse(60,60,7,7);
+		}
+		else if(droll == 3)
+		{
+		fill(0);
+		ellipse(40,40,7,7);
+		ellipse(60,60,7,7);
 		ellipse(50,50,7,7);
+		}
+		else if(droll == 4)
+		{
+		fill(0);
+		ellipse(40,40,7,7);
+		ellipse(60,40,7,7);
+		ellipse(40,60,7,7);
+		ellipse(60,60,7,7);
+		}
+		else if(droll == 5)
+		{
+		fill(0);
+		ellipse(40,40,7,7);
+		ellipse(60,40,7,7);
+		ellipse(40,60,7,7);
+		ellipse(60,60,7,7);
+		ellipse(50,50,7,7);
+		}
+		else if(droll == 6)
+		{
+		fill(0);
+		ellipse(40,40,7,7);
+		ellipse(60,40,7,7);
+		ellipse(40,60,7,7);
+		ellipse(60,60,7,7);
+		ellipse(40,50,7,7);
+		ellipse(60,50,7,7);
 		}
 
 
