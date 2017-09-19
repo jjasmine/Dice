@@ -1,13 +1,20 @@
 void setup()
 {
-	size(200,200);
+	size(600,600);
 	noLoop();
 }
 void draw()
 {
-	background(0);
-	Die b = new Die(20,150);
-	b.show();
+	background(255,4,2);
+	for( int y = 25; y <= 500; y+=70 )
+	{
+		for( int x = 25; x <= 500; x+=70)
+		{
+			Die b = new Die(x,y);
+			b.show();
+		}
+	}
+	
 }
 void mousePressed()
 {
@@ -32,18 +39,20 @@ class Die //models one single dice cube
 	
 	void show()
 	{
-		rect(25,25,50,50,7);
+		fill(255);
+		noStroke();                                                      
+		rect(myX,myY,50,50,7);
 
 		if(droll == 1)
 		{
 		fill(0);
-		ellipse(50,50,7,7);
+		ellipse(myX + 25,myY + 25,7,7);
 		}
 		else if(droll == 2)
 		{
 		fill(0);
-		ellipse(40,40,7,7);
-		ellipse(60,60,7,7);
+		ellipse(myX+15,myY+15,7,7);
+		ellipse(myX+35,myY+35,7,7);
 		}
 		else if(droll == 3)
 		{
