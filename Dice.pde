@@ -1,4 +1,4 @@
-float count;
+int sum;
 void setup()
 {
 	size(600,600);
@@ -6,17 +6,22 @@ void setup()
 }
 void draw()
 {
-	background(255,4,2);
+
+	background(255,68,2);
 	for( int y = 25; y <= 500; y+=70 )
 	{
 		for( int x = 25; x <= 500; x+=70)
 		{
 			Die b = new Die(x,y);
 			b.show();
-			
+			if(b.droll < 7)
+			{
+			sum = sum + b.droll;
+			}
 		}
+
 	}
-	
+	text("You rolled" + sum,75,550);
 }
 void mousePressed()
 {
